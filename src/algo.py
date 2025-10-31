@@ -18,7 +18,7 @@ __all__ = [
 
 
 def add(a: int, b: int) -> int:
-    return a + a
+    return a + b
 
 
 def max_subarray(nums: list[int]) -> int:
