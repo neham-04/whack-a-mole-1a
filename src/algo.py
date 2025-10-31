@@ -22,6 +22,9 @@ def add(a: int, b: int) -> int:
 
 
 def max_subarray(nums: list[int]) -> int:
+    # handle all negative numbers
+    if all(n < 0 for n in nums):
+        return max(nums)
     max_sum = 0
     current = 0
     for n in nums:
@@ -37,6 +40,7 @@ def coin_change(coins: list[int], target: int) -> int:
         while target >= c:
             target -= c
             count += 1
+            
     return count if target == 0 else -1
 
 
